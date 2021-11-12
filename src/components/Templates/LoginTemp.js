@@ -5,10 +5,12 @@ import {Label1} from '../Atoms/Label1'
 import {BtnLarge} from '../Atoms/BtnLarge'
 import { Dimensions, Image, Platform, StyleSheet, Text, TextInput, View } from 'react-native'
 import { BtnSmall } from '../Atoms/BtnSmall'
+import { useNavigation } from '@react-navigation/core'
 
 const {height}=Dimensions.get("screen")
-const height_Image = height * 0.48;
+const height_Image = height * 0.28;
 export const LoginTemp = () => {
+    const navigation = useNavigation();
     return (
         <View style={styles.container}>
             <View style={styles.header}>
@@ -32,7 +34,7 @@ export const LoginTemp = () => {
             <InlineInputMol password={true} icon="lock" placeholder="Password"/>
             </View>
 
-            <View style={styles.forgotText}>
+            <View style={[styles.forgotText, {marginTop:4}]}>
                 <BtnSmall color="#FFFF" textColor="#2196F3" title="Forgot Password?"/>
             </View>
 
@@ -47,12 +49,14 @@ export const LoginTemp = () => {
             </View>
 
             <View>
-                <BtnLarge title="Login with Google" color="rgba(196, 196, 196, 0.2);"></BtnLarge>
+                <BtnLarge 
+                title="Login with Google" 
+                color="rgba(196, 196, 196, 0.2);"/>
             </View>
 
             <View style={{flexDirection:'row',justifyContent:"center",alignItems:"center",marginTop:15}}>
             <Label1 title="New to this app?"/>
-            <BtnSmall color="#FFFF" textColor="#2196F3" title="Register"/>
+            <BtnSmall color="#FFFF" onPress={()=>navigation.navigate('Signup')} textColor="#2196F3" title="Register"/>
             </View>
 
             </View>

@@ -6,10 +6,13 @@ import {Label2} from '../Atoms/Label2'
 import {BtnLarge} from '../Atoms/BtnLarge'
 import { Dimensions, Image, Platform, StyleSheet, View } from 'react-native'
 import { BtnSmall } from '../Atoms/BtnSmall'
+import { useNavigation } from '@react-navigation/core'
 
 const {height}=Dimensions.get("screen")
-const height_Image = height * 0.48;
+const height_Image = height * 0.28;
+
 export const SignUpTemp = () => {
+    const navigation = useNavigation();
     return (
         <View style={styles.container}>
             <View style={styles.header}>
@@ -21,7 +24,7 @@ export const SignUpTemp = () => {
             </View>
             <View style={styles.footer}>
             <View style={{marginTop:-30, paddingBottom:10}}>
-            <H1 title="Sigup"/>
+            <H1 title="Signup"/>
             </View>
             
             <View style={styles.action}>
@@ -42,8 +45,8 @@ export const SignUpTemp = () => {
                 <BtnSmall color="#FFFF" textColor="#2196F3" title="Terms & conditions"/>
                 <Label2 title="and"/>
             </View>
-            <View style={{flexDirection:"row",marginTop:-14}}>
-                <BtnSmall color="#FFFF" textColor="#2196F3" title="Terms & conditions"/>
+            <View style={{flexDirection:"row",marginTop:-14,paddingHorizontal:-1}}>
+                <BtnSmall color="#FFFF" textColor="#2196F3" title="Privacy Policy"/>
                 </View>
             
             
@@ -54,7 +57,7 @@ export const SignUpTemp = () => {
 
             <View style={{flexDirection:'row',justifyContent:"center",alignItems:"center",marginTop:15}}>
             <Label1 title="Already have an account ?"/>
-            <BtnSmall color="#FFFF" textColor="#2196F3" title="Login"/>
+            <BtnSmall color="#FFFF" textColor="#2196F3" onPress={()=>navigation.navigate('Login')} title="Login"/>
             </View>
 
             </View>
@@ -96,7 +99,7 @@ const styles = StyleSheet.create({
         flexDirection:'row',
         alignItems:"center",
         marginTop:20,
-        marginHorizontal:5,
+        marginHorizontal:1,
         paddingVertical:5
     },
     underline:{

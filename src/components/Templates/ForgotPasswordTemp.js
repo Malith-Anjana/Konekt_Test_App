@@ -3,11 +3,11 @@ import {H1} from '../Atoms/H1'
 import {Paragraph1} from '../Atoms/Paragraph1'
 import {InlineInputMol} from '../Molecules/InlineInputMol'
 import {BtnLarge} from '../Atoms/BtnLarge'
-import { Dimensions, Image, Platform, StyleSheet, View } from 'react-native'
+import { Button, Dimensions, Image, Platform, StyleSheet, View } from 'react-native'
 
 
 const {height}=Dimensions.get("screen")
-const height_Image = height * 0.48;
+const height_Image = height * 0.28;
 
 export const ForgotPasswordTemp = () => {
     return (
@@ -33,7 +33,8 @@ export const ForgotPasswordTemp = () => {
             </View>
 
             <View style={{marginTop:50}}>
-                <BtnLarge title="Signup"/>
+                <BtnLarge title="Submit"/>
+                <Button title="test" onPress={()=>navigation.navigate('Login')}/>
             </View>
             </View>
         </View>

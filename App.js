@@ -7,16 +7,28 @@
  */
 
 import React from 'react'
-import { StyleSheet, Text, View } from 'react-native';
-import { ForgotPasswordPage } from './src/components/Pages/ForgotPasswordPage';
-import { LoginPage } from './src/components/Pages/LoginPage';
-import { SignUpPage } from './src/components/Pages/SignUpPage';
+import {NavigationContainer} from '@react-navigation/native';
+import {createNativeStackNavigator} from '@react-navigation/native-stack';
+import {StyleSheet} from 'react-native';
+import {ForgotPasswordPage} from './src/components/Pages/ForgotPasswordPage';
+import {LoginPage} from './src/components/Pages/LoginPage';
+import {SignUpPage} from './src/components/Pages/SignUpPage';
+import { OnBoard3 } from './src/components/Pages/OnBord3';
 
+const Stack = createNativeStackNavigator();
 const App = () => {
   return (
-    <View style={styles.container}>
-    <ForgotPasswordPage/>
-    </View>
+    <NavigationContainer>
+    <Stack.Navigator>
+    <Stack.Screen name="OnBoardscreen3" component={OnBoard3} options={{headerShown:false}}/>
+    <Stack.Screen name="forgotpasswordpage" component={ForgotPasswordPage} options={{headerShown:false}}/>    
+    <Stack.Screen name="Login" component={LoginPage} options={{headerShown:false}}/>
+    <Stack.Screen name="Signup" component={SignUpPage} options={{headerShown:false}}/>
+      
+    </Stack.Navigator>
+  </NavigationContainer>
+
+   
   )
 }
 export default App;

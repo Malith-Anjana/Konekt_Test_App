@@ -1,9 +1,9 @@
 import React from 'react'
 import { Button,Text, StyleSheet, TouchableOpacity } from 'react-native'
 
-export const BtnLarge = ({title,color}) => {
+export const BtnLarge = ({title,color,onPress}) => {
     return (
-        <TouchableOpacity
+        <TouchableOpacity onPress={onPress}
         style={[styles.button1,  {backgroundColor:!color?"#2196F3":color}]}
       >
         <Text style={[styles.text, {color: !color?"#FFFFFF":"black"}]}>{!title?"btnLarge":title}</Text>

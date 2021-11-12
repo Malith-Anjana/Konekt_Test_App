@@ -1,9 +1,9 @@
 import React from 'react'
 import { Button,Text, StyleSheet, TouchableOpacity } from 'react-native'
 
-export const BtnMedium = ({title}) => {
+export const BtnMedium = ({title,onPress}) => {
     return (
-        <TouchableOpacity
+        <TouchableOpacity onPress={onPress}
         style={styles.button2}
       >
         <Text style={styles.text}>{!title?"btnMedium":title}</Text>

@@ -11,7 +11,7 @@ const styles = StyleSheet.create({
     fontstyle: 'normal',
     fontweight: "600",
     lineHeight:36,
-    // fontFamily:"Poppins-Regular",
+    fontFamily:"Poppins-Regular",
     color: "#000000",
   },
 });

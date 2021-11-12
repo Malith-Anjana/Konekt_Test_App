@@ -1,24 +1,32 @@
-import React from 'react'
+import React, { useState } from 'react'
 import Feather from 'react-native-vector-icons/Feather'
-import { Dimensions, StyleSheet, TextInput, View } from 'react-native'
+import { Dimensions, StyleSheet, TextInput, Touchable, TouchableOpacity, View } from 'react-native'
 
 const {width}=Dimensions.get("screen")
 const appWidth = width * 0.68;
 
 export const InputInline = ({placeholder,password}) => {
+    const [pwIcon, setpwIcon] = useState(password)
+    
+    const passwordIcon=()=>{
+        setpwIcon(!pwIcon)
+    }
     return (
         <View style={styles.inline}>
         <TextInput 
         style={styles.input} 
         placeholder={!placeholder?"placeholder":placeholder}
         placeholderTextColor={"rgba(0, 0, 0, 0.5)"}
-        secureTextEntry={password}  
+        secureTextEntry={pwIcon}  
         />
-       {password && <Feather style={styles.feather} 
-                    name="eye-off"
+       {password && <TouchableOpacity onPress={()=>passwordIcon()}>
+       <Feather style={styles.feather} 
+                    name={pwIcon?"eye-off":"eye"}
                     color="grey"
                     size={18}
-                />}
+                />
+        </TouchableOpacity>
+        }
         </View>
     )
 }

@@ -5,12 +5,10 @@ import {Label1} from '../Atoms/Label1'
 import {BtnLarge} from '../Atoms/BtnLarge'
 import { Dimensions, Image, Platform, StyleSheet, Text, TextInput, View } from 'react-native'
 import { BtnSmall } from '../Atoms/BtnSmall'
-import { useNavigation } from '@react-navigation/core'
 
 const {height}=Dimensions.get("screen")
 const height_Image = height * 0.28;
-export const LoginTemp = () => {
-    const navigation = useNavigation();
+export const LoginTemp = ({forgotPWNavigate,loginNavigate,registerNavigate}) => {
     return (
         <View style={styles.container}>
             <View style={styles.header}>
@@ -35,7 +33,7 @@ export const LoginTemp = () => {
             </View>
 
             <View style={[styles.forgotText, {marginTop:4}]}>
-                <BtnSmall color="#FFFF" textColor="#2196F3" title="Forgot Password?"/>
+                <BtnSmall color="#FFFF" onPress={forgotPWNavigate} textColor="#2196F3" title="Forgot Password?"/>
             </View>
 
             <View>
@@ -56,7 +54,7 @@ export const LoginTemp = () => {
 
             <View style={{flexDirection:'row',justifyContent:"center",alignItems:"center",marginTop:15}}>
             <Label1 title="New to this app?"/>
-            <BtnSmall color="#FFFF" onPress={()=>navigation.navigate('Signup')} textColor="#2196F3" title="Register"/>
+            <BtnSmall color="#FFFF" onPress={registerNavigate} textColor="#2196F3" title="Register"/>
             </View>
 
             </View>

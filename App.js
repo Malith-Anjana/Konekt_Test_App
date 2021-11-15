@@ -14,12 +14,14 @@ import {ForgotPasswordPage} from './src/components/Pages/ForgotPasswordPage';
 import {LoginPage} from './src/components/Pages/LoginPage';
 import {SignUpPage} from './src/components/Pages/SignUpPage';
 import { OnBoard3 } from './src/components/Pages/OnBord3';
+import { SplashPage } from './src/components/Pages/SplashPage';
 
 const Stack = createNativeStackNavigator();
 const App = () => {
   return (
     <NavigationContainer>
     <Stack.Navigator>
+    <Stack.Screen name="splashscreen" component={SplashPage} options={{headerShown:false}}/>
     <Stack.Screen name="OnBoardscreen3" component={OnBoard3} options={{headerShown:false}}/>
     <Stack.Screen name="forgotpasswordpage" component={ForgotPasswordPage} options={{headerShown:false}}/>    
     <Stack.Screen name="Login" component={LoginPage} options={{headerShown:false}}/>

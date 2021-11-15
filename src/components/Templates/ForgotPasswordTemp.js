@@ -34,7 +34,6 @@ export const ForgotPasswordTemp = () => {
 
             <View style={{marginTop:50}}>
                 <BtnLarge title="Submit"/>
-                <Button title="test" onPress={()=>navigation.navigate('Login')}/>
             </View>
             </View>
         </View>

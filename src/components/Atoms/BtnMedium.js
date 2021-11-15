@@ -1,12 +1,12 @@
 import React from 'react'
-import { Button,Text, StyleSheet, TouchableOpacity } from 'react-native'
+import {Text, StyleSheet, TouchableOpacity } from 'react-native'
 
-export const BtnMedium = ({title,onPress}) => {
+export const BtnMedium = ({title,onPress,bgColor}) => {
     return (
         <TouchableOpacity onPress={onPress}
-        style={styles.button2}
+        style={[styles.button2, {backgroundColor:bgColor?bgColor:"#2196F3",}]}
       >
-        <Text style={styles.text}>{!title?"btnMedium":title}</Text>
+        <Text style={[styles.text, {color:bgColor?"#2196F3":"#fff"}]}>{!title?"btnMedium":title}</Text>
       </TouchableOpacity>
     )
 }
@@ -14,7 +14,6 @@ export const BtnMedium = ({title,onPress}) => {
 const styles = StyleSheet.create({
     button2:{
         height:40,
-        backgroundColor: "#2196F3",
         borderRadius:24,
         paddingHorizontal:20,
         flexDirection:"row",
@@ -25,7 +24,7 @@ const styles = StyleSheet.create({
     text:{
         fontSize:14,
         fontStyle:"normal",
-        fontWeight:"600",
+        fontWeight:"800",
         lineHeight:24,
         color: "#FFFFFF",
         

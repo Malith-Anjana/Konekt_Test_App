@@ -8,6 +8,7 @@ export const Paragraph2 = ({title}) => {
      para2:{
          fontStyle:"normal",
          fontWeight:"normal",
+         fontFamily:"Poppins-Regular",
          fontSize:12,
          lineHeight:18,
          color: "#000000",

@@ -11,9 +11,8 @@ const styles = StyleSheet.create({
     h3:{
         fontSize:20,
         fontStyle:'normal',
-        fontWeight:"bold",
         lineHeight:30,
-        // fontFamily:"Poppins-Regular",
+        fontFamily:"Poppins-Bold",
         color:"#000000"
     }
 })

@@ -37,6 +37,7 @@ const styles = StyleSheet.create({
         padding:1,
         marginLeft:10,
         width:appWidth,
+        fontFamily:"Poppins-Regular",
         borderBottomWidth:1,
         borderBottomColor:"grey"
     },

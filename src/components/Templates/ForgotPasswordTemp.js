@@ -2,8 +2,9 @@ import React from 'react'
 import {H1} from '../Atoms/H1'
 import {Paragraph1} from '../Atoms/Paragraph1'
 import {InlineInputMol} from '../Molecules/InlineInputMol'
-import {BtnLarge} from '../Atoms/BtnLarge'
-import { Button, Dimensions, Image, Platform, StyleSheet, View } from 'react-native'
+import {Dimensions, Image, Platform, StyleSheet, View } from 'react-native'
+import { AppButton } from '../Atoms/AppButton'
+import { Btn, COLORS, Images } from '../../../assets/constants'
 
 
 const {height}=Dimensions.get("screen")
@@ -15,7 +16,7 @@ export const ForgotPasswordTemp = () => {
             <View style={styles.header}>
                 <Image 
                 style={styles.image}
-                source={require("../../../assets/images/forgot-password.png")}
+                source={Images.forgotpassword}
                 resizeMode="center"
                 />
             </View>
@@ -33,7 +34,12 @@ export const ForgotPasswordTemp = () => {
             </View>
 
             <View style={{marginTop:50}}>
-                <BtnLarge title="Submit"/>
+                <AppButton 
+                btnType={Btn.btnLarge}
+                btnText={Btn.textLarge}
+                textColor={COLORS.white}
+                bgColor={COLORS.blue}
+                title="Submit"/>
             </View>
             </View>
         </View>

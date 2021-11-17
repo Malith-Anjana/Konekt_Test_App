@@ -1,5 +1,6 @@
 import React from 'react'
 import { StyleSheet, Text } from 'react-native'
+import { COLORS } from '../../../assets/constants'
 
 export const H1 = ({title}) => {
     return (
@@ -10,10 +11,9 @@ export const H1 = ({title}) => {
 const styles = StyleSheet.create({
     h1:{
         fontStyle:'normal',
-        fontWeight:"bold",
         fontSize:36,
         lineHeight:54,
         fontFamily:"Poppins-Bold",
-        color:"#000000"
+        color:COLORS.black
     }
 })

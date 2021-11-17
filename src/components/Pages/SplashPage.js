@@ -5,6 +5,6 @@ import { SplashTemp } from '../Templates/SplashTemp'
 export const SplashPage = () => {
     const navigation = useNavigation();
     return (
-        <SplashTemp mainNavigate={()=>navigation.navigate('Login')}/>
+        <SplashTemp mainNavigate={()=>navigation.navigate('OnBoardscreen3')}/>
     )
 }

@@ -2,19 +2,19 @@ import React from 'react'
 import {H1} from '../Atoms/H1'
 import {InlineInputMol} from '../Molecules/InlineInputMol'
 import {Label1} from '../Atoms/Label1'
-import {BtnLarge} from '../Atoms/BtnLarge'
+import {AppButton} from '../Atoms/AppButton'
 import { Dimensions, Image, Platform, StyleSheet, Text, TextInput, View } from 'react-native'
-import { BtnSmall } from '../Atoms/BtnSmall'
+import { Btn,COLORS,Images } from '../../../assets/constants'
 
 const {height}=Dimensions.get("screen")
 const height_Image = height * 0.28;
-export const LoginTemp = ({forgotPWNavigate,loginNavigate,registerNavigate}) => {
+export const LoginTemp = ({forgotPWNavigate,registerNavigate}) => {
     return (
         <View style={styles.container}>
             <View style={styles.header}>
                 <Image 
                 style={styles.image}
-                source={require("../../../assets/images/login.png")}
+                source={Images.login}
                 resizeMode="center"
                 />
             </View>
@@ -32,12 +32,21 @@ export const LoginTemp = ({forgotPWNavigate,loginNavigate,registerNavigate}) => 
             <InlineInputMol password={true} icon="lock" placeholder="Password"/>
             </View>
 
-            <View style={[styles.forgotText, {marginTop:4}]}>
-                <BtnSmall color="#FFFF" onPress={forgotPWNavigate} textColor="#2196F3" title="Forgot Password?"/>
+            <View style={[styles.forgotText, {marginBottom:5}]}>
+                <AppButton 
+                color={COLORS.white} 
+                onPress={forgotPWNavigate}
+                textColor={COLORS.blue}
+                title="Forgot Password?"/>
             </View>
-
-            <View>
-                <BtnLarge title="Login"/>
+          <View>
+                <AppButton
+                 title="Login" 
+                 btnType={Btn.btnLarge}
+                 btnText={Btn.textLarge}
+                 bgColor={COLORS.blue}
+                 textColor={COLORS.white}
+                 />
             </View>
 
             <View style={{paddingVertical:10, flexDirection:"row", justifyContent:"space-between", alignItems:"center",marginTop:10}}>
@@ -47,14 +56,27 @@ export const LoginTemp = ({forgotPWNavigate,loginNavigate,registerNavigate}) => 
             </View>
 
             <View>
-                <BtnLarge 
+                <AppButton
+                btnType={Btn.btnLarge}
+                btnText={Btn.textLarge}
                 title="Login with Google" 
-                color="rgba(196, 196, 196, 0.2);"/>
+                bgColor={COLORS.grey}
+                textColor={COLORS.black}
+                />
             </View>
 
-            <View style={{flexDirection:'row',justifyContent:"center",alignItems:"center",marginTop:15}}>
+            <View style={{
+            flexDirection:'row',
+            justifyContent:"center",
+            alignItems:"center",
+            marginTop:15,
+            marginRight:4}}>
             <Label1 title="New to this app?"/>
-            <BtnSmall color="#FFFF" onPress={registerNavigate} textColor="#2196F3" title="Register"/>
+            <AppButton
+             bgColor={COLORS.white} 
+             onPress={registerNavigate}
+             textColor={COLORS.blue} 
+             title="  Register"/>
             </View>
 
             </View>

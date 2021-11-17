@@ -9,9 +9,8 @@ const styles = StyleSheet.create({
   h2: {
     fontSize:24,
     fontstyle: 'normal',
-    fontweight: "600",
     lineHeight:36,
-    fontFamily:"Poppins-Regular",
+    fontFamily:"Poppins-SemiBold",
     color: "#000000",
   },
 });

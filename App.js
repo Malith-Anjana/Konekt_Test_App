@@ -15,6 +15,8 @@ import {LoginPage} from './src/components/Pages/LoginPage';
 import {SignUpPage} from './src/components/Pages/SignUpPage';
 import { OnBoard3 } from './src/components/Pages/OnBord3';
 import { SplashPage } from './src/components/Pages/SplashPage';
+import { PrivacyPolicyPage } from './src/components/Pages/PrivacyPolicyPage';
+import { TermsPage } from './src/components/Pages/TermsPage';
 
 const Stack = createNativeStackNavigator();
 const App = () => {
@@ -26,6 +28,8 @@ const App = () => {
     <Stack.Screen name="forgotpasswordpage" component={ForgotPasswordPage} options={{headerShown:false}}/>    
     <Stack.Screen name="Login" component={LoginPage} options={{headerShown:false}}/>
     <Stack.Screen name="Signup" component={SignUpPage} options={{headerShown:false}}/>
+    <Stack.Screen name="termspage" component={TermsPage} options={{headerShown:false}}/>
+    <Stack.Screen name="privacypolicypage" component={PrivacyPolicyPage} options={{headerShown:false}}/>
       
     </Stack.Navigator>
   </NavigationContainer>

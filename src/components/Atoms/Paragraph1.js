@@ -8,6 +8,8 @@ export const Paragraph1 = ({title}) => {
      para2:{
          fontStyle:"normal",
          fontWeight:"normal",
+         fontFamily:"Poppins-Regular",
+         textAlign:"justify",
          fontSize:14,
          lineHeight:21,
          color: "#000000",

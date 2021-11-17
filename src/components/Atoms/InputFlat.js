@@ -18,7 +18,7 @@ const styles = StyleSheet.create({
         height:50,
         width:269,
         fontSize:14,
-        fontWeight:"normal",
+        fontFamily:"Popppins-Regular",
         fontStyle:"normal",
         lineHeight:21,
         paddingStart:20,

@@ -6,8 +6,7 @@ export const Label2 = ({title}) => {
 };
  const styles = StyleSheet.create({
      label2:{
-         fontStyle:"normal",
-         fontWeight:"normal",
+         fontFamily:"Poppins-Regular",
          fontSize:12,
          lineHeight:18,
          color: "#000000",

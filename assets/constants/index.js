@@ -1,3 +1,6 @@
-import theme, {SIZES} from "./theme";
+import {SIZES,COLORS} from "./theme";
+import FAQ from "./FAQdata";
+import Btn from "./Btn";
+import Images from "./Images";
 
-export { theme,SIZES}
+export { COLORS,Images,SIZES,Btn,FAQ}
